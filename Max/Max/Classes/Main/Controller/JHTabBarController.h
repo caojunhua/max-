@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JHTabBarController.h
 //  Max
 //
 //  Created by 曹均华 on 2017/7/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface JHTabBarController : UITabBarController
 
 @end
-
