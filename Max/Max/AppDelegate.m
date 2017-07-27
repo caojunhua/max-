@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JHTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,10 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //设置根控制器
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    JHTabBarController *JHTabBar = [[JHTabBarController alloc] init];
+    self.window.rootViewController = JHTabBar;
+    [self.window makeKeyAndVisible];
+    
+    //设置导航栏颜色状态
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -16,14 +16,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor greenColor];
+    //设置导航栏图片
+    [self setNaviagtionBarImage];
 }
-
+- (void)setNaviagtionBarImage {
+    UIImage *leftImg = [UIImage imageNamed:@"反馈_20x20_"];
+    UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [leftBtn setImage:leftImg forState:UIControlStateNormal];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    [leftBtn addTarget:self action:@selector(clickLeftImg) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIImage *rightImg = [UIImage imageNamed:@"search_icon_18x20_"];
+    UIButton *rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [rightBtn setImage:rightImg forState:UIControlStateNormal];
+    [rightBtn addTarget:self action:@selector(clickRightImg) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    UIImageView *titleImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"normal_max_bottom_logo_48x16_"]];
+    self.navigationItem.titleView= titleImg;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark -- 点击事件
+- (void)clickLeftImg {
+    NSLog(@"点击了左侧图片");
+}
+- (void)clickRightImg {
+    NSLog(@"点击了右侧图片");
+}
 /*
 #pragma mark - Navigation
 
