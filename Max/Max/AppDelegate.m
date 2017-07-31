@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "JHTabBarController.h"
-
+#import "LoginViewController.h"
+#import "LoginsViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,11 +18,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //设置根控制器
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    JHTabBarController *JHTabBar = [[JHTabBarController alloc] init];
-    self.window.rootViewController = JHTabBar;
-    [self.window makeKeyAndVisible];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]== NO){
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        LoginsViewController *loginViewController = [[LoginsViewController alloc] init];
+        self.window.rootViewController = loginViewController;
+        [self.window makeKeyAndVisible];
+    }else{
+        //设置根控制器
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        JHTabBarController *JHTabBar = [[JHTabBarController alloc] init];
+        self.window.rootViewController = JHTabBar;
+        [self.window makeKeyAndVisible];
+    }
     
     //设置导航栏颜色状态
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
