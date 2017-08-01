@@ -18,6 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isLogin"];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLogin"]== NO){
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         LoginsViewController *loginViewController = [[LoginsViewController alloc] init];
