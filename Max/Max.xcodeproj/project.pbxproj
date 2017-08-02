@@ -24,6 +24,7 @@
 		84D3059B1F28D62C006E7342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D305991F28D62C006E7342 /* LaunchScreen.storyboard */; };
 		84DE49D01F2F846800B8D080 /* LoginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DE49CE1F2F846800B8D080 /* LoginsViewController.m */; };
 		84DE49D11F2F846800B8D080 /* LoginsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DE49CF1F2F846800B8D080 /* LoginsViewController.xib */; };
+		84DE49D91F322C1600B8D080 /* BaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DE49D81F322C1600B8D080 /* BaseScrollViewController.m */; };
 		F846EB1B806CAFFDAF578387 /* libPods-Max.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF7BA0E1168F33C8D44FF54 /* libPods-Max.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		84DE49CD1F2F846800B8D080 /* LoginsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginsViewController.h; sourceTree = "<group>"; };
 		84DE49CE1F2F846800B8D080 /* LoginsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginsViewController.m; sourceTree = "<group>"; };
 		84DE49CF1F2F846800B8D080 /* LoginsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginsViewController.xib; sourceTree = "<group>"; };
+		84DE49D71F322C1600B8D080 /* BaseScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScrollViewController.h; sourceTree = "<group>"; };
+		84DE49D81F322C1600B8D080 /* BaseScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollViewController.m; sourceTree = "<group>"; };
 		BCF7BA0E1168F33C8D44FF54 /* libPods-Max.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Max.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BC6B3A990874DBE47E2DBB /* Pods-Max.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Max.release.xcconfig"; path = "Pods/Target Support Files/Pods-Max/Pods-Max.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,6 +320,7 @@
 		84B6B6C41F28E50E002F6BE8 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				84DE49D31F32295000B8D080 /* BaseScrollView */,
 				8463D68E1F2F78C000A34F14 /* Login */,
 				84B6B6C51F28E50E002F6BE8 /* Category */,
 				84B6B6C61F28E50E002F6BE8 /* Lib */,
@@ -376,6 +380,15 @@
 				84D305891F28D62C006E7342 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84DE49D31F32295000B8D080 /* BaseScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				84DE49D71F322C1600B8D080 /* BaseScrollViewController.h */,
+				84DE49D81F322C1600B8D080 /* BaseScrollViewController.m */,
+			);
+			path = BaseScrollView;
 			sourceTree = "<group>";
 		};
 		B985ACAE47BC709092240789 /* Frameworks */ = {
@@ -514,6 +527,7 @@
 				84D3058D1F28D62C006E7342 /* AppDelegate.m in Sources */,
 				84DE49D01F2F846800B8D080 /* LoginsViewController.m in Sources */,
 				84B6B6D21F2A207E002F6BE8 /* JHDataViewController.m in Sources */,
+				84DE49D91F322C1600B8D080 /* BaseScrollViewController.m in Sources */,
 				84B6B6D51F2A20A3002F6BE8 /* JHGuessViewController.m in Sources */,
 				84B6B6DE1F2A26C7002F6BE8 /* UIImage+Image.m in Sources */,
 				84B6B6DB1F2A20DD002F6BE8 /* JHLiveViewController.m in Sources */,
